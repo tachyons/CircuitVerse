@@ -8,7 +8,7 @@ tasks:
   - init: >
       cp config/database.example.yml config/database.yml &&
       createuser -s postgres &&
-      redis-server &&
+      redis-server & &&
       bundle install --without production &&
       bundle exec rake sunspot:solr:start &&
       rails db:setup
