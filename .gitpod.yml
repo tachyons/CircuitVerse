@@ -7,6 +7,7 @@ ports:
 tasks:
   - init: >
       cp config/database.example.yml config/database.yml &&
+      createuser -s postgres &&
       bundle install --without production &&
       rails db:setup
     command: >
