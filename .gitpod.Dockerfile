@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-postgres
 
 USER root
 
@@ -8,7 +8,5 @@ USER root
 RUN apt-get update \
     && apt-get install -y postgresql postgresql-contrib \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
-
-CMD sudo service postgresql start
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
