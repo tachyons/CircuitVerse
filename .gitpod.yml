@@ -10,8 +10,10 @@ tasks:
       createuser -s postgres &&
       (redis-server &) &&
       bundle install --without production &&
-      rails db:setup &&
+      rails db:create &&
+      rails db:schema:load &&
       rails db:migrate &&
+      rails db:seed &&
       bundle exec rake sunspot:solr:start
     command: >
       rails db:migrate &&
