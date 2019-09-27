@@ -14,7 +14,7 @@ tasks:
       rails db:setup &&
       rails db:migrate
     command: >
-      rails db:migrate
+      rails db:migrate &&
       bundle exec rails
 github:
     prebuilds:
