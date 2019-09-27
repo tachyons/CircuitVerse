@@ -9,6 +9,7 @@ tasks:
       cp config/database.example.yml config/database.yml &&
       createuser -s postgres &&
       bundle install --without production &&
+      bundle exec rake sunspot:solr:start &&
       rails db:setup
     command: >
       bin/setup &&
