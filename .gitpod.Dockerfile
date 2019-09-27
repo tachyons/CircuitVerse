@@ -9,6 +9,6 @@ RUN apt-get update \
     && apt-get install -y postgresql postgresql-contrib \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
-RUN service start postgresql
+RUN sudo service postgresql start
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
