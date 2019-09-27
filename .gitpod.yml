@@ -11,10 +11,11 @@ tasks:
       redis-server & &&
       bundle install --without production &&
       bundle exec rake sunspot:solr:start &&
-      rails db:setup
+      rails db:setup &&
+      rails db:migrate
     command: >
-      bin/setup &&
-      rails s
+      rails db:migrate
+      bundle exec rails
 github:
     prebuilds:
         pullRequestsFromForks: true
