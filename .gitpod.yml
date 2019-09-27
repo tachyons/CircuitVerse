@@ -17,7 +17,7 @@ tasks:
       rails db:seed
     command: >
       rails db:migrate &&
-      bundle exec rails
+      bundle exec rails server
 github:
     prebuilds:
         pullRequestsFromForks: true
