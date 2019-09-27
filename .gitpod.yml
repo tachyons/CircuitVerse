@@ -13,8 +13,8 @@ tasks:
       rails db:create &&
       rails db:schema:load &&
       rails db:migrate &&
-      rails db:seed &&
-      bundle exec rake sunspot:solr:start
+      bundle exec rake sunspot:solr:start &&
+      rails db:seed
     command: >
       rails db:migrate &&
       bundle exec rails
